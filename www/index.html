@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!--HTML5 doctype-->
-<html>
+<html><!--HTML5 doctype-->
+
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-    <script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
-    <script type="text/javascript" language="javascript">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script type="text/javascript" language="javascript">
     // This event handler is fired once the intel libraries are ready
     function onDeviceReady() {
         //hide splash screen now that our app is ready to run
@@ -18,9 +18,9 @@
     }
     //initial event handler to detect when intel is ready to roll
     document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
-    </script>
-    <script src="js/appframework.ui.min.js"></script>
-    <script>
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
     $.ui.autoLaunch = false;
     $.ui.useOSThemes = true; //Change this to false to force a device theme
     $.ui.blockPageScroll();
@@ -28,30 +28,34 @@
         if ($.ui.useOSThemes && (!$.os.ios||$.os.ios7))
             $("#afui").removeClass("ios");
     });
-    </script>
-    <script src="js/pouchdb-2.0.1.js"></script>
-    <script src="js/app.js"></script>
-    <link href="css/icons.css" rel="stylesheet" type="text/css"></link>
-    <link href="css/af.ui.css" rel="stylesheet" type="text/css"></link>
+</script>
+<script src="js/promise-0.1.1.min.js"></script>
+<script src="js/pouchdb-2.0.1.min.js"></script>
+<script src="js/app.js"></script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <div id="afui" class='ios'>
-        <div id="header"></div>
-        <div id="content">
-            <div class="panel" title="Main" data-nav="nav_0" id="main" selected="selected">
-                <a class="button" href="#" style="" data-appbuilder-object="button">Hello World</a>
-            </div>
+
+<div id="afui" class="ios">
+    <div id="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Main" data-nav="nav_0" id="main" selected="selected"
+        style="">
+            <a class="button" href="#" style="" data-appbuilder-object="button">Hello World</a>
         </div>
-        <div id="navbar">
-            <a href="#main" class="icon home">Home</a>
-        </div>
-        <header id="header_0" data-appbuilder-object="header">
-            <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
-            <h1 id="pageTitle" class="">test</h1>   
-        </header>
-        <nav id="nav_0" data-appbuilder-object="nav">
-            <h1>Side Menu</h1>
-        </nav>
     </div>
-</body>
+    <div id="navbar">
+        <a href="#main" class="icon home">Home</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
+        <h1 id="pageTitle" class="">test</h1> 
+    </header>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Side Menu</h1>
+    </nav>
+</div>
+
+
+
 </html>
